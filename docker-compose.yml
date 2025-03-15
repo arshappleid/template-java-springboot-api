@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
     app-dev:
         build: .
@@ -38,7 +36,9 @@ services:
                 - action: rebuild
                   path: pom.xml
     app-prod:
-        build: .
+        build:
+            context: .
+            dockerfile: dockerfile-prod
         ports:
             - "8080:8080"
         profiles:

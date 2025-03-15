@@ -35,7 +35,7 @@ Run ```docker compose --profile test up --watch```
 Will have to check container logs, to review the tests of the results.
 
 ## How to compile the Source Code for deployment
-Simply ```docker-compose up --build```
+Simply ```docker-compose --profile prod up```
 
 
 
