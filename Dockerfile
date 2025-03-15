@@ -20,4 +20,4 @@ RUN mvn clean package -DskipTests
 EXPOSE 8080
 
 # Run Spring Boot app automatically
-CMD ["java", "-jar", "target/cloudmersive-interview-1.0-SNAPSHOT.jar"]
+#CMD ["java", "-jar", "target/cloudmersive-interview-1.0-SNAPSHOT.jar"]

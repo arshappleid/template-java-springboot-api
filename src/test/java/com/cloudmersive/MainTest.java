@@ -15,7 +15,7 @@ public class MainTest {
 	@Test
 	public void testAddition() {
 		int actual = 7;
-		int expected = 7;
+		int expected = 10;
 		assertEquals(actual, expected, "Test Did not pass");
 	}
 

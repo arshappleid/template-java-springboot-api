@@ -9,7 +9,7 @@ public class getInfo {
 	public Map<String, Object> readMe(String username) {
 		String message = "Hello " + username + ".";
 		return Map.of(
-				"status", "succes",
+				"status", "nvm i am",
 				"message", message,
 				"data", Map.of("value", 123, "flag", true));
 	}

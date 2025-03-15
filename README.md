@@ -30,8 +30,14 @@ This project is a template for a Spring Boot application, designed to streamline
 ## How to compile for deployment with hotreload
 Run the following command ```SPRING_PROFILES_ACTIVE=dev docker-compose up --build --watch```
 
+## Hotreload, but re run tests each time
+Run ```docker compose --profile test up --watch```
+Will have to check container logs, to review the tests of the results.
+
 ## How to compile the Source Code for deployment
 Simply ```docker-compose up --build```
+
+
 
 ## How the code is compiled
 Technically Docker & Docker compose handles all this for us.
