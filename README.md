@@ -1,7 +1,7 @@
 ## Description
 This project is a template for a Spring Boot application, designed to streamline the setup and deployment process. It includes a basic structure for a RESTful API, integration with Maven for build automation, and instructions for running the application locally. The code base has been built on the Model View Controller Architecture.
 
-If anyone simply wants to start building api , simply copy down the source code and follow the following steps.
+If anyone simply wants to start building api, simply copy down the source code and follow the following steps.
 
 	1. Configure incoming Object Type in the ```src/java/com/{project-name}/dto/``` folder.
 	1. Configure the API Configuration in the ```src/java/com/{project-name}/controller/``` in the Api Controller.
@@ -45,6 +45,8 @@ Run the following command ```docker-compose --profile dev up --build --watch``` 
 Run ```docker compose --profile test up --watch```, which will lauch the server in hot
 Will have to check container logs, to review the tests of the results.
 
+Note : You cannot query the API in this mode, this is specifically designed for CI/CD purposes to ensure that it can be ensured that all tests are passing.
+
 ## How to compile the Source Code for deployment
 Simply ```docker-compose --profile prod up```, after copying down the source code, and ensuring that docker is installed on the production server.
 
@@ -67,3 +69,13 @@ If you change the name of the project, make sure to also change it from the ```p
 ### Installing Dependency
 
 Copy down the XML info, into the ```pom.xml``` file, and then let the container rebuilt. In dev and test mode, it will automatically rebuild.
+
+### Unit Testing
+
+Currently the repo is set to use [JUnit Framework]() to unit test the code base.
+
+
+
+## References
+
+[JUNIT Testing Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) 

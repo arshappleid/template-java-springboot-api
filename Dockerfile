@@ -18,7 +18,7 @@ RUN mvn clean package -DskipTests
 
 # Expose Spring Boot default port
 EXPOSE 8080
-EXPOSE 35729
+EXPOSE 9090
 
 # Run Spring Boot app automatically
 #CMD ["java", "-jar", "target/cloudmersive-interview-1.0-SNAPSHOT.jar"]

@@ -18,7 +18,7 @@ public class getInfoTest {
 	@Test
 	public void testAddition() {
 		int actual = 7;
-		int expected = 7;
+		int expected = 8;
 		assertEquals(actual, expected, "Test Did not pass");
 	}
 

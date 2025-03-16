@@ -17,12 +17,14 @@ services:
                   target: /app/src/
                 - action: rebuild
                   path: pom.xml
+                - action: rebuild
+                  path: ./src/main/resources/application-dev.properties
 
     app-test:
         build: .
         container_name: my-java-app
         environment:
-            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_PROFILES_ACTIVE=dev
         profiles:
             - test
         command: ["mvn", "spring-boot:run"]
