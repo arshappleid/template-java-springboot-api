@@ -1,16 +1,15 @@
 package com.cloudmersive;
 
 import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SampleTest {
 
-	private App main;
-
-	@BeforeEach
-	void setUp() {
-		main = new App(); // runs before each test method
-	}
+	// Initiate an instance of the app
+	@Autowired
+	App app;
 
 	@Test
 	public void testAddition() {
@@ -18,6 +17,14 @@ public class SampleTest {
 		int expected = 7;
 
 		assertEquals(actual, expected, "Test Did not pass");
+	}
+
+	@Test
+	public void testArrayEquals() {
+		int[] actual = { 1, 2, 3 };
+		int[] expected = { 1, 2, 3 };
+
+		assertArrayEquals(expected, actual);
 	}
 
 }

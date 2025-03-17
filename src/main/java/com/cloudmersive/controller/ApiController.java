@@ -25,7 +25,7 @@ public class ApiController {
 	}
 
 	@GetMapping("/getInfo")
-	public Map<String, Object> getInfo(@RequestBody getInfoInput input) {
+	public Map<String, Object> getInfo() {
 		return getInfoService.readMe("unknown user");
 	}
 

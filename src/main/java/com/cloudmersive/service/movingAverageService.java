@@ -2,6 +2,9 @@ package com.cloudmersive.service;
 
 import java.util.*;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class movingAverageService {
 	public static Map<String, Object> getResp(int[] nums, int windowSize) {
 		double[] resp;
