@@ -3,10 +3,13 @@ This project is a template for a Spring Boot application, designed to streamline
 
 If anyone simply wants to start building api, simply copy down the source code and follow the following steps.
 
-	1. Configure incoming Object Type in the ```src/java/com/{project-name}/dto/``` folder.
-	1. Configure the API Configuration in the ```src/java/com/{project-name}/controller/``` in the Api Controller.
-	1. Write down Any Tests for any business logic in the ```test/java/com/{project-name}/ service/``` folder.
-	1. Write down the logic for the Service in ```src/java/com/{project-name}/service/``` folder.
+```
+1. Configure incoming Object Type in the ```src/java/com/{project-name}/dto/``` folder.
+2. Configure the API Configuration in the ```src/java/com/{project-name}/controller/``` in the Api Controller.
+3. Write down Any Tests for any business logic in the ```test/java/com/{project-name}/ service/``` folder.
+4. Write down the logic for the Service in ```src/java/com/{project-name}/service/``` folder.
+
+```
 
 *All the above code samples have been provided.*
 
@@ -42,7 +45,7 @@ Any issues have been record in the issues section of the repo.
 Run the following command ```docker-compose --profile dev up --build --watch``` .  
 
 ## Hotreload, but re-run tests each time
-Run ```docker compose --profile test up --watch```, which will lauch the server in hot
+Run ```docker compose --profile test up --watch```, which will launch the server in hot reload mode
 Will have to check container logs, to review the tests of the results.
 
 Note : You cannot query the API in this mode, this is specifically designed for CI/CD purposes to ensure that it can be ensured that all tests are passing.
@@ -78,4 +81,4 @@ Currently the repo is set to use [JUnit Framework]() to unit test the code base.
 
 ## References
 
-[JUNIT Testing Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) 
+###### [JUNIT Testing Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) 
