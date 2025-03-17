@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.cloudmersive.dto.getInfoInput;
-import com.cloudmersive.service.getInfo;
+import com.cloudmersive.dto.movingAverageInput;
+import com.cloudmersive.service.getInfoService;
+import com.cloudmersive.service.movingAverageService;
 
 import java.util.Map;
 
@@ -14,7 +16,7 @@ import java.util.Map;
 public class ApiController {
 
 	@Autowired
-	private getInfo getInfoService;
+	private getInfoService getInfoService;
 
 	@PostMapping("/getInfo")
 	public Map<String, Object> transform(@RequestBody getInfoInput input) {
@@ -26,4 +28,12 @@ public class ApiController {
 	public Map<String, Object> getInfo(@RequestBody getInfoInput input) {
 		return getInfoService.readMe("unknown user");
 	}
+
+	@PostMapping("/calculateMovingAverage")
+	public Map<String, Object> getInfo(@RequestBody movingAverageInput input) {
+		int[] nums = input.getData();
+		int windowSize = input.getWindowSize();
+		return movingAverageService.getResp(nums, windowSize);
+	}
+
 }

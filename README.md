@@ -81,4 +81,5 @@ Currently the repo is set to use [JUnit Framework]() to unit test the code base.
 
 ## References
 
-###### [JUNIT Testing Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) 
+1. [JUNIT Testing Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) 
+2. [JUNIT Writing Test Case Sample](https://junit.org/junit5/docs/current/user-guide/#writing-tests)
