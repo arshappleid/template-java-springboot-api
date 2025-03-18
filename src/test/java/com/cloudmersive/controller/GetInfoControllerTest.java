@@ -32,7 +32,8 @@ public class GetInfoControllerTest {
 	public void testGetInfoGet() throws Exception {
 		// Expected Behaviour
 		// When I call this method on this controller, return this.
-		when(apiController.getInfo()).thenReturn(Map.of("message", "unknown user"));;
+		when(apiController.getInfo()).thenReturn(Map.of("message", "unknown user"));
+		;
 
 		// Actual
 		mockMvc.perform(get("/api/getInfo")) // Ensure this matches the actual mapping in your controller
@@ -58,6 +59,6 @@ public class GetInfoControllerTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(jsonRequest))
 				.andExpect(status().isOk());
-				
+
 	}
 }
