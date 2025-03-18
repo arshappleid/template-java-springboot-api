@@ -4,36 +4,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.cloudmersive.dto.getInfoInput;
-import com.cloudmersive.dto.movingAverageInput;
-import com.cloudmersive.service.getInfoService;
-import com.cloudmersive.service.movingAverageService;
+import com.cloudmersive.dto.mathInput;
+import com.cloudmersive.service.mathService;
 
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/math")
 public class ApiController {
 
 	@Autowired
-	private getInfoService getInfoService;
+	private mathService math;
 
-	@PostMapping("/getInfo")
-	public Map<String, Object> transform(@RequestBody getInfoInput input) {
-		String username = input.getUsername();
-		return getInfoService.readMe(username);
+	@PostMapping("/addValues")
+	public Map<String, Object> addValues(@RequestBody mathInput input) {
+		int[] nums = input.getData();
+		if (nums == null || nums.length == 0) {
+			return Map.of(
+					"message", "Invalid Input");
+		}
+		return mathService.addValues(nums);
 	}
 
 	@GetMapping("/getInfo")
 	public Map<String, Object> getInfo() {
-		return getInfoService.readMe("unknown user");
-	}
-
-	@PostMapping("/calculateMovingAverage")
-	public Map<String, Object> getInfo(@RequestBody movingAverageInput input) {
-		int[] nums = input.getData();
-		int windowSize = input.getWindowSize();
-		return movingAverageService.getResp(nums, windowSize);
+		return Map.of(
+				"message", "Hello World");
 	}
 
 }

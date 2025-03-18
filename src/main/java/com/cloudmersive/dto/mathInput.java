@@ -2,14 +2,14 @@ package com.cloudmersive.dto;
 
 import com.fasterxml.jackson.annotation.*;
 
-public class movingAverageInput {
+public class mathInput {
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	@JsonProperty(required = false)
 	private String message;
 
 	@JsonProperty(required = true)
-	private int windowSize;
+	private int num;
 
 	@JsonProperty(required = true)
 	private int[] dataArr;
@@ -20,8 +20,8 @@ public class movingAverageInput {
 		return this.dataArr;
 	}
 
-	public int getWindowSize() {
-		return this.windowSize;
+	public int getNum() {
+		return this.num;
 	}
 
 	public String getMessage() {

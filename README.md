@@ -1,18 +1,3 @@
-## Description
-This project is a template for a Spring Boot application, designed to streamline the setup and deployment process. It includes a basic structure for a RESTful API, integration with Maven for build automation, and instructions for running the application locally. The code base has been built on the Model View Controller Architecture.
-
-If anyone simply wants to start building api, simply copy down the source code and follow the following steps.
-
-```
-1. Configure incoming Object Type in the ```src/java/com/{project-name}/dto/``` folder.
-2. Configure the API Configuration in the ```src/java/com/{project-name}/controller/``` in the Api Controller.
-3. Write down Any Tests for any business logic in the ```test/java/com/{project-name}/ service/``` folder.
-4. Write down the logic for the Service in ```src/java/com/{project-name}/service/``` folder.
-
-```
-
-*All the above code samples have been provided.*
-
 Any issues have been record in the issues section of the repo.
 
 ## Repo Structure
@@ -75,7 +60,7 @@ Copy down the XML info, into the ```pom.xml``` file, and then let the container 
 
 ### Unit Testing
 
-Currently the repo is set to use [JUnit Framework]() to unit test the code base.
+Currently the repo is set to use [JUnit Framework](https://junit.org/junit4/javadoc/4.8/org/junit/Assert.html) to unit test the code base.
 
 
 
